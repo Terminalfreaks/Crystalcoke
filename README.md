@@ -1,4 +1,4 @@
-# crystalcoke
+# Crystalcoke
 
 A really stupid and kinda dank CLI as a "practical" project for Crystal.
 
