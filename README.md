@@ -4,12 +4,12 @@ A really stupid and kinda dank CLI as a "practical" project for Crystal.
 
 ## Installation
 
-Download the script in bin/\\
-???\\
-Run it (probably only works on linux)\\
+Download the script in bin/  
+???  
+Run it (probably only works on linux)  
 
-If you are on any other platform you can build the project yourself on Crystal.\\
-Just install it at <https://crystal-lang.org/install/>, download the repo and run `crystal build src/crystalcoke.cr`.\\
+If you are on any other platform you can build the project yourself on Crystal.  
+Just install it at <https://crystal-lang.org/install/>, download the repo and run `crystal build src/crystalcoke.cr`.  
 Congrats, you now built an executable! Run it. It should be in the root directory.
 
 ## Usage
