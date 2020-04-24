@@ -9,8 +9,8 @@ Download the script in bin/
 Run it (probably only works on linux)  
 
 If you are on any other platform you can build the project yourself on Crystal.  
-Just install it at <https://crystal-lang.org/install/>, download the repo and run `crystal build src/crystalcoke.cr`.  
-Congrats, you now built an executable! Run it. It should be in the root directory.
+Just install it at <https://crystal-lang.org/install/>, download the repo and run `shards build`.  
+Congrats, you now built an executable! Run it. It should be in the bin directory.
 
 ## Usage
 
