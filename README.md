@@ -1,6 +1,7 @@
 # Crystalcoke
 
-A really stupid and kinda dank CLI as a "practical" project for Crystal.
+A really stupid and kinda dank CLI as a "practical" project for Crystal.  
+This is more or less the better and up to date version of [MCI](https://github.com/Terminalfreaks/MCI), which is another CLI which does similar to the same things that this does.  
 
 ## Installation
 
