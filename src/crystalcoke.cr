@@ -1,7 +1,8 @@
 require "phreak"
 require "yaml"
+require "json"
 shard = YAML.parse(File.read("./shard.yml"))
-list = YAML.parse(File.read("./src/utils/copypasta.yml"))
+list = JSON.parse(File.read("./src/utils/copypasta.json"))
 
 module Crystalcoke
   Phreak.parse! do |cc|
@@ -26,7 +27,15 @@ module Crystalcoke
       end
 
       pasta.bind(word: "list") do
-        puts list["copypasta"].as_a.join("\n")
+        pastamenu = list["copypasta"].as_h
+        pastalist = [] of String
+
+        pastamenu.each do |key, value|
+          pastalist << key
+        end
+
+        puts "Here is a list of the copypasta u can use. Run it with \"crystalcoke copypasta <pasta>\"."
+        puts pastalist
       end
 
       pasta.missing_args do
