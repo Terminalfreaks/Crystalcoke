@@ -22,11 +22,11 @@ module Crystalcoke
     end
 
     cc.bind(word: "copypasta", description: "Get your favourite copypasta!!!") do |pasta|
-      pasta.bind(word: "help") do
+      pasta.bind(word: "help", description: "List all copypasta sub commands") do
         puts pasta
       end
 
-      pasta.bind(word: "list") do
+      pasta.bind(word: "list", description: "Lists all the availble copypasta") do
         pastamenu = list["copypasta"].as_h
         pastalist = [] of String
 
