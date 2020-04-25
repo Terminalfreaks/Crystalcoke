@@ -15,6 +15,11 @@ module Crystalcoke
       puts cc
     end
 
+    cc.bind(word: "ping",
+      description: "Pings idk nasa its a stupid command") do
+      puts "pong! 69ms bro"
+    end
+
     # Print commands when there is no commands or arguments
     cc.default do
       puts cc
