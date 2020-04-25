@@ -79,11 +79,11 @@ while gaming
   next_line = gets || ""
   case next_line
   when "1"
-    puts "haha imagine running away pussy ass\nu still fall down a hole"
+    puts "\nhaha imagine running away pussy ass\nu still fall down a hole"
   when "2"
-    puts "stupid u dont have armor. the creeper blows up and u die"
+    puts "\nstupid u dont have armor. the creeper blows up and u die"
   when "3"
-    puts "so u stand their for the creeper to blow up. congrats dumbass"
+    puts "\nso u stand their for the creeper to blow up. congrats dumbass"
   end
   exit
 end
@@ -96,9 +96,9 @@ while ask_for_succ
 
   case next_line
   when "yes"
-    puts "no fuck you"
+    puts "\nno fuck you"
   when "no"
-    puts "why did u ask stupid"
+    puts "\nwhy did u ask stupid"
   end
   exit
 end
