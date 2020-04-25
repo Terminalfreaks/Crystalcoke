@@ -1,35 +1,28 @@
-require "option_parser"
 require "phreak"
 require "yaml"
 require "json"
 shard = YAML.parse(File.read("./shard.yml"))
-list = JSON.parse(File.read("./src/utils/copypasta.json"))
 
 module Crystalcoke
   Phreak.parse! do |cc|
-    cc.banner = "A really stupid and dank CLI as a \"practical\" project for Crystal."
+    cc.banner = "A really stupid and kinda dank CLI as a \"practical\" project for Crystal."
 
-    # Help command
-    cc.bind(word: "help", short_flag: 'h') do
+    cc.bind(short_flag: 'n', long_flag: "nothing",
+      description: "Do absolutely nothing.") do
+    end
+
+    cc.bind(short_flag: 'h', long_flag: "help",
+      description: "Shows all the available commands and flags.") do
       puts cc
     end
 
-    # Does literally nothing
-    cc.bind(word: "nothing", short_flag: 'n') do
+    cc.bind(word: "ping", description: "Pings idk nasa its a stupid command") do
+      puts "pong! 69ms bro"
     end
 
-    cc.bind(word: "ping", short_flag: 'p') do
-      puts "pong! 69ms"
-    end
-
-    cc.bind(word: "copypasta", short_flag: 'c') do
-      OptionParser.parse do |e|
-        e.banner = "f"
-
-        e.on "--pasta", "i want to die" do
-          puts "testing"
-        end
-      end
+    # Print commands when there is no commands or arguments
+    cc.default do
+      puts cc
     end
   end
 end
