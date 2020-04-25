@@ -26,7 +26,7 @@ module Crystalcoke
       end
 
       pasta.bind(word: "list") do
-        puts list["copypasta"]
+        puts list["copypasta"].as_a.join("\n")
       end
 
       pasta.missing_args do
