@@ -23,12 +23,17 @@ module Crystalcoke
       puts cc
     end
 
+    cc.bind(short_flag: 'v', long_flag: "version",
+      description: "Shows the version of Crystalcoke.") do
+      puts "Crystalcoke #{shard["version"]}"
+    end
+
     cc.bind(word: "ping", description: "Pings idk nasa its a stupid command") do
       puts "pong! 69ms bro"
     end
 
     cc.bind(word: "pickle", description: "Finds out the size of ur pickle") do |pickle|
-      pickle.grab do |pickle, u|
+      pickle.grab do |u, pickle|
         usize = Random.new.rand(18)
         puts "#{u}'s pickle is: 8#{"=" * usize}D"
       end
@@ -65,14 +70,18 @@ module Crystalcoke
     end
 
     cc.bind(word: "hack", description: "hack someone's router") do |hackz|
-      hackz.grab do |person, a|
+      hackz.grab do |a, person|
         ip = "#{Random.new.rand(256)}.#{Random.new.rand(256)}.#{Random.new.rand(256)}.#{Random.new.rand(256)}"
         array = ["Hacking #{person}'s computer...", "Getting their IP address...", "Address found! #{ip}"]
         Array(String).from_json("#{array}") do |e|
           puts e
           zawarudo
         end
-        puts "congrats u did it"
+        puts "now wonder to urself if this stupid generated ip works"
+      end
+
+      hackz.missing_args do
+        puts hackz
       end
     end
 
