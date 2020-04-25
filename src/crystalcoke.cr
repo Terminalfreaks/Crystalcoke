@@ -25,6 +25,10 @@ module Crystalcoke
         puts pasta
       end
 
+      pasta.bind(word: "list") do
+        puts list["copypasta"]
+      end
+
       pasta.missing_args do
         puts pasta
       end
