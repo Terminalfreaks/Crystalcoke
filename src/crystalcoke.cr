@@ -3,6 +3,10 @@ require "yaml"
 require "json"
 shard = YAML.parse(File.read("./shard.yml"))
 
+def zawarudo # :^)
+  sleep 2
+end
+
 module Crystalcoke
   Phreak.parse! do |cc|
     cc.banner = "A really stupid and kinda dank CLI as a \"practical\" project for Crystal."
@@ -30,6 +34,19 @@ module Crystalcoke
         size = Random.new.rand(19)
         puts "Here is ur pickle: 8#{"=" * size}D"
       end
+    end
+
+    cc.bind(word: "watermellon", description: "saying watermellon avoids sneezes!!!1!") do
+      # this is gonna look really bad
+      puts "Rob > bro im gonna sneeze"
+      zawarudo
+      puts "Rob > aaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAaaa"
+      zawarudo
+      puts "Gary > just say watermellon bro"
+      zawarudo
+      puts "Rob > watermellon"
+      sleep 5
+      puts "Rob > ok"
     end
 
     # Print commands when there is no commands or arguments
