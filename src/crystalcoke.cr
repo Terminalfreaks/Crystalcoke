@@ -1,6 +1,7 @@
 require "phreak"
 require "yaml"
 shard = YAML.parse(File.read("./shard.yml"))
+list = YAML.parse(File.read("./src/utils/copypasta.yml"))
 
 module Crystalcoke
   Phreak.parse! do |cc|
@@ -15,9 +16,18 @@ module Crystalcoke
       puts cc
     end
 
-    cc.bind(word: "ping",
-      description: "Pings idk nasa its a stupid command") do
+    cc.bind(word: "ping", description: "Pings idk nasa its a stupid command") do
       puts "pong! 69ms bro"
+    end
+
+    cc.bind(word: "copypasta", description: "Get your favourite copypasta!!!") do |pasta|
+      pasta.bind(word: "help") do
+        puts pasta
+      end
+
+      pasta.missing_args do
+        puts pasta
+      end
     end
 
     # Print commands when there is no commands or arguments
