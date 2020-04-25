@@ -64,6 +64,18 @@ module Crystalcoke
       ask_for_succ = true
     end
 
+    cc.bind(word: "hack", description: "hack someone's router") do |hackz|
+      hackz.missing_args do |person, a|
+      	ip = "#{Random.new.rand(256)}.#{Random.new.rand(256)}.#{Random.new.rand(256)}.#{Random.new.rand(256)}"
+        array = ["Hacking #{a}'s computer...", "Getting their IP address...", "Address found! #{ip}"]
+        Array(String).from_json("#{array}") do |e|
+          puts e
+          zawarudo
+        end
+        puts "congrats u did it"
+      end
+    end
+
     # Print commands when there is no commands or arguments
     cc.default do
       puts cc
