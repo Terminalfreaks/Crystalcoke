@@ -7,6 +7,8 @@ def zawarudo # :^)
   sleep 2
 end
 
+gaming = false
+
 module Crystalcoke
   Phreak.parse! do |cc|
     cc.banner = "A really stupid and kinda dank CLI as a \"practical\" project for Crystal."
@@ -49,9 +51,26 @@ module Crystalcoke
       puts "Rob > ok"
     end
 
+    cc.bind(word: "minecraft", description: "play some minecraft bro") do
+      gaming = true
+    end
+
     # Print commands when there is no commands or arguments
     cc.default do
       puts cc
     end
   end
+end
+
+while gaming
+  puts "oh no looks like you found a creeper. what are u gonna do? write the number for ur option"
+  puts "1. run away like a bitch\n2. fight like a boss\n3. kys"
+
+  printf "> "
+  next_line = gets || ""
+  case next_line
+  when "1"
+    puts "haha imagine running away pussy ass\nu still fall down a hole"
+  end
+  exit
 end
