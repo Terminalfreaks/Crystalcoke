@@ -20,6 +20,18 @@ module Crystalcoke
       puts "pong! 69ms bro"
     end
 
+    cc.bind(word: "pickle", description: "Finds out the size of ur pickle") do |pickle|
+      pickle.grab do |pickle, u|
+        usize = Random.new.rand(18)
+        puts "#{u}'s pickle is: 8#{"=" * usize}D"
+      end
+
+      pickle.missing_args do
+        size = Random.new.rand(19)
+        puts "Here is ur pickle: 8#{"=" * size}D"
+      end
+    end
+
     # Print commands when there is no commands or arguments
     cc.default do
       puts cc
