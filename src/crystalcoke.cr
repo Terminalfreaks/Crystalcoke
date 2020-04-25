@@ -34,7 +34,8 @@ module Crystalcoke
           pastalist << key
         end
 
-        puts "Here is a list of the copypasta u can use.\nRun it with \"crystalcoke copypasta <pasta>\"."
+        puts "Here is a list of the copypasta u can use.\nRun it with \"crystalcoke copypasta <pasta>.\""
+        puts ""
         puts pastalist.join("\n")
       end
 
