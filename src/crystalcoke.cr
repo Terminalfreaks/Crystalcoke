@@ -71,6 +71,10 @@ while gaming
   case next_line
   when "1"
     puts "haha imagine running away pussy ass\nu still fall down a hole"
+  when "2"
+    puts "stupid u dont have armor. the creeper blows up and u die"
+  when "3"
+    puts "so u stand their for the creeper to blow up. congrats dumbass"
   end
   exit
 end
