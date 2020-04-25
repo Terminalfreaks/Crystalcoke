@@ -34,8 +34,8 @@ module Crystalcoke
           pastalist << key
         end
 
-        puts "Here is a list of the copypasta u can use. Run it with \"crystalcoke copypasta <pasta>\"."
-        puts pastalist
+        puts "Here is a list of the copypasta u can use.\nRun it with \"crystalcoke copypasta <pasta>\"."
+        puts pastalist.join("\n")
       end
 
       pasta.missing_args do
