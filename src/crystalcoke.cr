@@ -100,4 +100,5 @@ while ask_for_succ
   when "no"
     puts "why did u ask stupid"
   end
+  exit
 end
