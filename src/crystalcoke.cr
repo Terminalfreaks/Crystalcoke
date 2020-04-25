@@ -8,6 +8,7 @@ def zawarudo # :^)
 end
 
 gaming = false
+ask_for_succ = false
 
 module Crystalcoke
   Phreak.parse! do |cc|
@@ -55,6 +56,14 @@ module Crystalcoke
       gaming = true
     end
 
+    cc.bind(word: "wank", description: "hahahahahaha loser") do
+      puts "fucking lonely ass gonna go get the lube hhhahhahahahahahhahahahahahhahahaha"
+    end
+
+    cc.bind(word: "succ", description: "ask for some succ") do
+      ask_for_succ = true
+    end
+
     # Print commands when there is no commands or arguments
     cc.default do
       puts cc
@@ -77,4 +86,18 @@ while gaming
     puts "so u stand their for the creeper to blow up. congrats dumbass"
   end
   exit
+end
+
+while ask_for_succ
+  puts "hi there person do u want some sUcC?????"
+
+  printf "> "
+  next_line = gets || ""
+
+  case next_line
+  when "yes"
+    puts "no fuck you"
+  when "no"
+    puts "why did u ask stupid"
+  end
 end
