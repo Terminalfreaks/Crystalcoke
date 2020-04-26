@@ -89,9 +89,9 @@ module Crystalcoke
       # "detection"
       detection = Random.new.rand(101) # random between 1-100 because the number u put isnt the max u get
       if detection > 50
-        puts "fucking thot"
+        puts "fucking thot #{detection}%"
       else
-        puts "aight ur ok"
+        puts "aight ur ok #{detection}%"
       end
     end
 
