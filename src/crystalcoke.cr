@@ -85,6 +85,16 @@ module Crystalcoke
       end
     end
 
+    cc.bind(word: "thot", description: "help find a thot") do
+      # "detection"
+      detection = Random.new.rand(101) # random between 1-100 because the number u put isnt the max u get
+      if detection > 50
+        puts "fucking thot"
+      else
+        puts "aight ur ok"
+      end
+    end
+
     # Print commands when there is no commands or arguments
     cc.default do
       puts cc
